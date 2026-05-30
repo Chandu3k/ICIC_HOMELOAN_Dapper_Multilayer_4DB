@@ -1,0 +1,6 @@
+@Dapper_MultiLayer_4DB_HostAddress = http://localhost:5062
+
+GET {{Dapper_MultiLayer_4DB_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

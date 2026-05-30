@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Api/">
+    <Project Path="Dapper_MultiLayer_4DB/ICICBank_HomeLoan.csproj" />
+  </Folder>
+  <Folder Name="/Library/">
+    <Project Path="BussinessEntites/BussinessEntites.csproj" />
+    <Project Path="DBConnectivity/DBConnectivity.csproj" />
+    <Project Path="Repository/Repository.csproj" />
+    <Project Path="Service/Service.csproj" />
+  </Folder>
+  <Folder Name="/Testing/" />
+</Solution>

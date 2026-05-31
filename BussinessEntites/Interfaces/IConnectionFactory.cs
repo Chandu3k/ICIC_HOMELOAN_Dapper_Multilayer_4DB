@@ -10,5 +10,6 @@ namespace BussinessEntites.Interfaces
     public interface IConnectionFactory
     {
         IDbConnection HotelsConnectionString();
+        IDbConnection RestaurantConnectionString();
     }
 }

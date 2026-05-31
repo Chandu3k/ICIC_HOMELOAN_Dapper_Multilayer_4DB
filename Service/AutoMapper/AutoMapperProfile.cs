@@ -15,6 +15,8 @@ namespace Service.AutoMapper
         {
             CreateMap<Hotels,HotelsDto>();
             CreateMap<HotelsDto, Hotels>();
+
+            CreateMap<Restaurant, RestaurantDto>().ReverseMap();
         }
     }
 }

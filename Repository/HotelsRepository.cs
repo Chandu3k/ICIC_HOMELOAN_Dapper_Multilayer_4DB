@@ -49,7 +49,7 @@ namespace Repository
                 }
                 else
                 {
-                    string DeletedData = $"Deleted Student: Id={hotel.Id}, Name:{hotel.HotelName}, Location:{hotel.Location}";
+                    string DeletedData = $"Deleted Hotel: Id={hotel.Id}, Name:{hotel.HotelName}, Location:{hotel.Location}";
                     await con.ExecuteAsync(SP_Names.DeleteHotel, parma, commandType: CommandType.StoredProcedure);
                     return DeletedData;
                 }

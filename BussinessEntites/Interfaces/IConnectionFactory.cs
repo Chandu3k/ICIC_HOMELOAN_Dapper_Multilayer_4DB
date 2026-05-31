@@ -11,5 +11,6 @@ namespace BussinessEntites.Interfaces
     {
         IDbConnection HotelsConnectionString();
         IDbConnection RestaurantConnectionString();
+        IDbConnection ProductConnectionString();
     }
 }

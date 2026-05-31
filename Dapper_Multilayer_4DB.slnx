@@ -8,5 +8,7 @@
     <Project Path="Repository/Repository.csproj" />
     <Project Path="Service/Service.csproj" />
   </Folder>
-  <Folder Name="/Testing/" />
+  <Folder Name="/Testing/">
+    <Project Path="HomeLoan_Tests/HomeLoan_Tests.csproj" />
+  </Folder>
 </Solution>

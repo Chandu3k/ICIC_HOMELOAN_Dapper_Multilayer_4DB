@@ -1,3 +1,10 @@
+using BussinessEntites.Interfaces;
+using DBConnectivity;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Repository;
+using Service;
+using Service.AutoMapper;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +13,22 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+#region  Sql Dependency Injection
+builder.Services.TryAddSingleton<IConnectionFactory,ConnectionFactory>();
+#endregion
+
+
+
+#region  Dependency Injection for Services and Repositories
+builder.Services.AddScoped<IHotelsServices, HotelsService>();
+builder.Services.AddScoped<IHotelsRepository, HotelsRepository>();
+#endregion
+
+
+#region Automapper
+AutoMapperConfiguration.InitializeMap(builder.Services);
+#endregion
 
 var app = builder.Build();
 

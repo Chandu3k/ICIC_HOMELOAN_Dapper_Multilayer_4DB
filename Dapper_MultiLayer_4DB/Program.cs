@@ -23,6 +23,8 @@ builder.Services.TryAddSingleton<IConnectionFactory,ConnectionFactory>();
 #region  Dependency Injection for Services and Repositories
 builder.Services.AddScoped<IHotelsServices, HotelsService>();
 builder.Services.AddScoped<IHotelsRepository, HotelsRepository>();
+builder.Services.AddScoped<IRestaurantService, RestaurantService>();
+builder.Services.AddScoped<IRestaurantRepository, RestaurantRepository>();
 #endregion
 
 

@@ -23,5 +23,14 @@ namespace BussinessEntites.Utils
         public const string UpdateRestaurant = "Usp_UpdateRestaurant";
         public const string GetRestaurants = "Usp_GetRestaurants";
         #endregion
+
+        #region --Products--
+        public const string AddProduct = "Usp_AddProduct";
+        public const string GetProducts = "Usp_GetProducts";
+        public const string GetProductById = "Usp_GetProductById";
+        public const string UpdateProduct = "Usp_UpdateProduct";
+        public const string DeleteProduct = "Usp_DeleteProduct";
+        #endregion
+
     }
 }

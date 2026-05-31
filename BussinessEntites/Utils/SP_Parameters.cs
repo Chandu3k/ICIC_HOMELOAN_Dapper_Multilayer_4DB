@@ -25,5 +25,14 @@ namespace BussinessEntites.Utils
         public const string Restaurant_InsertedValue = "@InsertedId";
         public const string Restaurant_RowCount = "@UpdatedRows";
         #endregion
+
+        #region--Products parameters--
+        public const string ProductId = "@ProductId";
+        public const string ProductName = "@ProductName";
+        public const string ProductPrice = "@Price";
+        public const string Product_IsActive = "@IsActive";
+        public const string Product_InsertedValue = "@InsertedId";
+        public const string Product_RowCount = "@UpdatedRows";
+        #endregion
     }
 }

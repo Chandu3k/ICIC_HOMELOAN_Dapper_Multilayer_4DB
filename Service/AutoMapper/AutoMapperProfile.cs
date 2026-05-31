@@ -17,6 +17,7 @@ namespace Service.AutoMapper
             CreateMap<HotelsDto, Hotels>();
 
             CreateMap<Restaurant, RestaurantDto>().ReverseMap();
+            CreateMap<Product, ProductDto>().ReverseMap();
         }
     }
 }

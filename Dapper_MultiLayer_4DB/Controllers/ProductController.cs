@@ -6,24 +6,24 @@ namespace ICICBank_HomeLoan.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RestaurantController : ControllerBase
+    public class ProductController : ControllerBase
     {
-        private readonly IRestaurantService _service;
-        public RestaurantController(IRestaurantService service)
+        private readonly IProductService _service;
+        public ProductController(IProductService service)
         {
             _service = service;
         }
 
         [HttpGet]
-        [Route("GetAllRestaurants")]
-        public async Task<IActionResult> GetAllRestaurants()
+        [Route("GetAllProducts")]
+        public async Task<IActionResult> GetAllProducts()
         {
             try
             {
-                var result = await _service.GetAllRestaurant();
+                var result = await _service.GetAllProductsAsync();
                 if (result == null || !result.Any())
                 {
-                    return StatusCode(StatusCodes.Status404NotFound, "Restaurants  data not  found");
+                    return StatusCode(StatusCodes.Status404NotFound, "Products data not found");
                 }
                 else
                 {
@@ -38,15 +38,15 @@ namespace ICICBank_HomeLoan.Controllers
         }
 
         [HttpGet]
-        [Route("GetHotelById/{id}")]
-        public async Task<IActionResult> GetAllHotelsById(int id)
+        [Route("GetProductById/{id}")]
+        public async Task<IActionResult> GetAllProductsById(int id)
         {
             try
             {
-                var result = await _service.GetRestaurantById(id);
+                var result = await _service.GetProductByIdAsync(id);
                 if (result == null)
                 {
-                    return StatusCode(StatusCodes.Status404NotFound, $"Restaurant with Id:{id} not found");
+                    return StatusCode(StatusCodes.Status404NotFound, $"Product with Id:{id} not found");
                 }
                 else
                 {
@@ -59,12 +59,12 @@ namespace ICICBank_HomeLoan.Controllers
             }
         }
         [HttpPost]
-        [Route("AddRestaurant")]
-        public async Task<IActionResult> AddRestaurant([FromBody] RestaurantDto restaurent)
+        [Route("AddProduct")]
+        public async Task<IActionResult> AddProduct([FromBody] ProductDto product)
         {
             try
             {
-                var result = await _service.AddRestaurant(restaurent);
+                var result = await _service.AddProductAsync(product);
                 return StatusCode(StatusCodes.Status201Created, result);
             }
             catch (Exception ex)
@@ -74,15 +74,15 @@ namespace ICICBank_HomeLoan.Controllers
         }
 
         [HttpPut]
-        [Route("UpdateRestaurant")]
-        public async Task<IActionResult> UpdateRestaurant([FromBody] RestaurantDto restaurant)
+        [Route("UpdateProduct")]
+        public async Task<IActionResult> UpdateProduct([FromBody] ProductDto product)
         {
             try
             {
-                var result = await _service.UpdateRestaurant(restaurant);
+                var result = await _service.UpdateProductAsync(product);
                 if (result == null)
                 {
-                    return StatusCode(StatusCodes.Status404NotFound, $"Restaurant with Id:{restaurant.Id} not found");
+                    return StatusCode(StatusCodes.Status404NotFound, $"Product with Id:{product.ProductId} not found");
                 }
                 else
                 {
@@ -95,15 +95,15 @@ namespace ICICBank_HomeLoan.Controllers
             }
         }
         [HttpDelete]
-        [Route("DeleteHotel/{id}")]
-        public async Task<IActionResult> DeleteHotel(int id)
+        [Route("DeleteProduct/{id}")]
+        public async Task<IActionResult> DeleteProduct(int id)
         {
             try
             {
-                var result = await _service.DeleteRestaurant(id);
+                var result = await _service.DeleteProductAsync(id);
                 if (result == null)
                 {
-                    return StatusCode(StatusCodes.Status404NotFound, $"Restaurant with Id:{id} not found");
+                    return StatusCode(StatusCodes.Status404NotFound, $"Product with Id:{id} not found");
                 }
                 else
                 {

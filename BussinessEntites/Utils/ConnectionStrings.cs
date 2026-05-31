@@ -10,5 +10,6 @@ namespace BussinessEntites.Utils
     {
         public const string HotelsSqlConnection = "Hotels_DBsqlConnectionString";
         public const string RestaurantsSqlConnection = "Restaurants_DBsqlConnectionString";
+        public const string ProductsSqlConnection = "Products_DBsqlConnectionString";
     }
 }

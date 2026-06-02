@@ -34,5 +34,14 @@ namespace BussinessEntites.Utils
         public const string Product_InsertedValue = "@InsertedId";
         public const string Product_RowCount = "@UpdatedRows";
         #endregion
+
+        #region--Midland parameters--
+        public const string MidlandItemId = "@Id";
+        public const string MidlandItemName = "@Name";
+        public const string MidlandItemCity = "@City";
+        public const string MidlandItem_IsActive = "@IsActive";
+        public const string MidlandItem_InsertedValue = "@InsertedId";
+        public const string MidlandItem_RowCount = "@UpdatedRows";
+        #endregion
     }
 }

@@ -32,5 +32,12 @@ namespace BussinessEntites.Utils
         public const string DeleteProduct = "Usp_DeleteProduct";
         #endregion
 
+        #region --Midland--
+        public const string AddMidlandItem = "Usp_AddMidlandItem";
+        public const string GetMidlandItems = "Usp_GetMidlandItems";
+        public const string GetMidlandItemById = "Usp_GetMidlandItemById";
+        public const string UpdateMidlandItem = "Usp_UpdateMidlandItem";
+        public const string DeleteMidlandItem = "Usp_DeleteMidlandItem";
+        #endregion
     }
 }

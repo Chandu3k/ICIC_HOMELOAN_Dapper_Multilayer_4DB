@@ -27,11 +27,13 @@ builder.Services.AddScoped<IRestaurantService, RestaurantService>();
 builder.Services.AddScoped<IRestaurantRepository, RestaurantRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IMidlandRepository, MidlandRepository>();
+builder.Services.AddScoped<IMidlandService, MidlandService>();
 #endregion
 
 
 #region Automapper
-AutoMapperConfiguration.InitializeMap(builder.Services);
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 #endregion
 
 var app = builder.Build();

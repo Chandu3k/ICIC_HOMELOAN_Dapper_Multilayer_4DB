@@ -26,6 +26,12 @@ namespace DBConnectivity
             return new SqlConnection(connectionString);
         }
 
+        public IDbConnection MidlandConnectionString()
+        {
+            string connectionString = _configuration.GetConnectionString(ConnectionStrings.MidlandSqlConnection);
+            return new SqlConnection(connectionString);
+        }
+
         public IDbConnection ProductConnectionString()
         {
             string connectionString = _configuration.GetConnectionString(ConnectionStrings.ProductsSqlConnection);

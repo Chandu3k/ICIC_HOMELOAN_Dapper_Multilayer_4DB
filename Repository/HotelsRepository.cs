@@ -1,7 +1,9 @@
 ﻿using BussinessEntites.Interfaces;
+using BussinessEntites.Interfaces.IRepository;
 using BussinessEntites.Models;
 using BussinessEntites.Utils;
 using Dapper;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -20,6 +22,7 @@ namespace Repository
         }
         public async Task<int> AddHotels(Hotels hotel)
         {
+            
             using(IDbConnection con = _connectionFactory.HotelsConnectionString())
             {
                 DynamicParameters Hotel=new DynamicParameters();

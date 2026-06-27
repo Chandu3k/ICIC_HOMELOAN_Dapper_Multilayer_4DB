@@ -43,5 +43,64 @@ namespace BussinessEntites.Utils
         public const string MidlandItem_InsertedValue = "@InsertedId";
         public const string MidlandItem_RowCount = "@UpdatedRows";
         #endregion
+
+        #region project level logging parameters
+        public const string Logging_userName = "@userName";
+        public const string Logging_LogLevel = "@LogLevel";
+        public const string Logging_MessageTemplate = "@MessageTemplate";
+        #endregion
+
+        #region ErrorLog Parameters
+        public const string ErrorLog_StatusCode = "@StatusCode";
+        public const string ErrorLog_ErrorMessage = "@ErrorMessage";
+        public const string ErrorLog_StackTraceError = "@StackTraceError";
+        public const string ErrorLog_InnerExceptionError = "@InnerExceptionError";
+        public const string ErrorLog_UserName = "@UserName";
+        #endregion
+
+
+        #region -- User Parameters --
+
+        public const string UserId = "@UserId";
+        public const string UserName = "@UserName";
+        public const string Password = "@Password";
+        public const string EmailId = "@EmailId";
+        public const string PhoneNumber = "@PhoneNumber";
+        public const string Address = "@Address";
+        public const string IsActive = "@IsActive";
+
+        #endregion
+
+        #region -- Role Parameters --
+
+        public const string RoleId = "@RoleId";
+        public const string RoleName = "@RoleName";
+
+        #endregion
+
+        #region -- UserRole Mapping Parameters --
+
+        public const string UserRole_UserId = "@UserId";
+        public const string UserRole_RoleId = "@RoleId";
+
+        #endregion
+
+        #region -- Login Parameters --
+
+        public const string Login_UserName = "@UserName";
+        public const string Login_Password = "@Password";
+
+        #endregion
+
+        #region -- Token / Response Related (if used in SP later) --
+
+        public const string StatusCode = "@StatusCode";
+        public const string StatusMessage = "@StatusMessage";
+
+        #endregion
+
+        
+
+
     }
 }

@@ -39,5 +39,28 @@ namespace BussinessEntites.Utils
         public const string UpdateMidlandItem = "Usp_UpdateMidlandItem";
         public const string DeleteMidlandItem = "Usp_DeleteMidlandItem";
         #endregion
+
+        #region  Projectlevel Loging
+        public const string ProjectLevelLog = "Usp_ProjectLevelLog";
+        #endregion
+
+        #region ProjectLevelErrorLog
+        public const string ProjectLevelErrorLog = "Usp_AddProjectLevelErrorlog";
+        #endregion
+
+        #region TokenBasedAuthentication Stored Procedures
+
+        public static readonly string GetUserRolesInformation = "Usp_GetUserRolesInformation";
+
+        public static readonly string SignIn = "Usp_LoginCheck";
+
+        public static readonly string UserRegistration = "Usp_UserRegistration";
+
+        public static readonly string RoleRegistration = "Usp_RoleRegistration";
+
+        public static readonly string UserRoleRegistration = "Usp_UserRoleRegistration";
+
+        #endregion
+
     }
 }

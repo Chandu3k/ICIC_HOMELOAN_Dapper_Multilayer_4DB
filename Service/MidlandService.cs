@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BussinessEntites.Dtos;
-using BussinessEntites.Interfaces;
+using BussinessEntites.Interfaces.IRepository;
+using BussinessEntites.Interfaces.IServices;
 using BussinessEntites.Models;
 using System;
 using System.Collections.Generic;

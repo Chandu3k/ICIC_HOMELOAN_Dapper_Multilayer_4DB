@@ -13,5 +13,7 @@ namespace BussinessEntites.Interfaces
         IDbConnection RestaurantConnectionString();
         IDbConnection ProductConnectionString();
         IDbConnection MidlandConnectionString();
+
+        IDbConnection LogsConnectionString();
     }
 }

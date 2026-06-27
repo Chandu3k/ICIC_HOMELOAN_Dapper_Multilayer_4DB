@@ -12,5 +12,6 @@ namespace BussinessEntites.Utils
         public const string RestaurantsSqlConnection = "Restaurants_DBsqlConnectionString";
         public const string ProductsSqlConnection = "Products_DBsqlConnectionString";
         public const string MidlandSqlConnection = "Midland_DBsqlConnectionString";
+        public const string LogsSqlConnection = "Logs_DBsqlConnectionString";
     }
 }

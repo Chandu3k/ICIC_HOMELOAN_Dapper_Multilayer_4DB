@@ -1,4 +1,5 @@
 ﻿using BussinessEntites.Interfaces;
+using BussinessEntites.Interfaces.IRepository;
 using BussinessEntites.Models;
 using BussinessEntites.Utils;
 using Dapper;
